@@ -27,6 +27,7 @@
     "vite-plugin-gh-pages": "^1.0.0",
     "vue-template-compiler": "^2.6.14"
   },
+  "homepage": "https://noniaacosta.github.io/GestorTareas-Plantilla/",
   "eslintConfig": {
     "root": true,
     "env": {
