@@ -2,12 +2,7 @@
     <div class="add-task-container">
         <h1>Añadir Tarea</h1>
         <div class="input-group">
-            <input 
-                v-model="newTask" 
-                @keyup.enter="addTask" 
-                placeholder="Añadir nueva tarea" 
-                class="task-input"
-            />
+            <input v-model="newTask" @keyup.enter="addTask" placeholder="Añadir nueva tarea" class="task-input" />
             <button @click="addTask" class="add-button">Añadir</button>
         </div>
 
@@ -15,10 +10,11 @@
             <div v-for="task in tasks" :key="task.id" class="task-item">
                 <span :class="{ completed: task.completed }">{{ task.todo }}</span>
                 <div>
-                    <button @click="toggleTaskCompletion(task)">
-                        {{ task.completed ? 'Desmarcar' : 'Completar' }}
+                    <button @click="toggleTaskCompletion(task)"
+                        :class="task.completed ? 'btn btn-dark' : 'btn btn-success'">
+                        <span v-html="task.completed ? 'Desmarcar' : 'Completar'"></span>
                     </button>
-                    <button @click="deleteTask(task)">Eliminar</button>
+                    <button class="btn btn-danger" @click="deleteTask(task)">Eliminar</button>
                 </div>
             </div>
         </div>
@@ -41,7 +37,7 @@ export default {
             const newTask = {
                 todo: this.newTask,
                 completed: false,
-                id: Date.now(), 
+                id: Date.now(),
             };
 
             // Añadir la nueva tarea al inicio de la lista

@@ -12,7 +12,7 @@
             <!-- Muestra si la tarea está Completada o Pendiente -->
             <!-- Comentario: Puedes cambiar este texto o agregar etiquetas visuales (por ejemplo, con colores o iconos) -->
             <span>
-                {{ completed ? 'Completada' : 'Pendiente' }}
+                {{ completed ? '<span class="badge bg-success">Completada</span>' : '<span class="badge bg-danger">Pendiente</span>' }}
             </span>
         </div>
 
@@ -22,7 +22,7 @@
             <!-- Emite el evento 'toggle-completion' para indicar que se cambió el estado de la tarea -->
             <!-- Comentario: Personaliza el texto, estilo o reemplaza con un ícono (ej. ✔ / ✘) -->
             <button @click="$emit('toggle-completion')">
-                Marcar como {{ completed ? 'Pendiente' : 'Completada' }}
+                Marcar como {{ completed ? '<span class=\'badge bg-danger\'>Pendiente</span>' : '<span class=\'badge bg-success\'>Completada</span>' }}
             </button>
 
             <!-- Botón para eliminar la tarea de la lista -->
