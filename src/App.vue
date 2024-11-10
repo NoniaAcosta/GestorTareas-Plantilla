@@ -1,12 +1,6 @@
 <template>
   <div id="app">
     <!-- Barra de navegación con enlaces a diferentes rutas -->
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/addtask"><i class="fas fa-plus"></i> Agregar Tarea</router-link> 
-      <router-link to="/lista_tareas">Listar Tarea</router-link> 
-    </nav> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
